@@ -34,3 +34,9 @@
   - Добавлены DTO и ответы поиска: `BaseResponse`, `TrackDto`, `TracksSearchRequest`, `TracksSearchResponse`.
   - Добавлены `NetworkClient`, `TracksRepository` и реализация `TracksRepositoryImpl` с маппингом времени трека.
   - Уточнены сценарии настроек: надежное открытие почты и браузера через chooser.
+- Sprint 6:
+  - Добавлены `SearchState` и `SearchViewModel` для экрана поиска (MVVM).
+  - Добавлен `Creator` для создания `TracksRepository`.
+  - Реализованы 4 состояния поиска: initial, loading, success, fail.
+  - Экран `SearchScreen` подключен к `StateFlow` и отображает найденные треки.
+  - Добавлен ресурс `ic_music` для списка треков.
