@@ -19,6 +19,11 @@
 
 - Sprint 3:
   - Добавлен главный экран на Compose.
-  - Созданы `MainActivity`, `SearchActivity`, `SettingsActivity`.
-  - Реализованы переходы с главного экрана на поиск и настройки.
+  - Реализованы базовые переходы с главного экрана на поиск и настройки.
   - Добавлен чек-лист в `checklists/sprint-3.md`.
+- Sprint 4:
+  - Добавлен `PlaylistHost` с навигацией через `NavHost` и `NavController`.
+  - Реализованы `MainScreen`, `SearchScreen`, `SettingsScreen` на Compose.
+  - Добавлена логика очистки поискового запроса на экране поиска.
+  - Реализованы действия настроек: share, email и открытие пользовательского соглашения.
+  - Добавлен чек-лист в `checklists/sprint-4.md`.
