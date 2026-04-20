@@ -27,3 +27,10 @@
   - Добавлена логика очистки поискового запроса на экране поиска.
   - Реализованы действия настроек: share, email и открытие пользовательского соглашения.
   - Добавлен чек-лист в `checklists/sprint-4.md`.
+- Sprint 5:
+  - Проект переведен на структуру Clean Architecture: `creator`, `data`, `domain`, `ui`.
+  - `MainActivity` перенесена в пакет `ui/activity`, обновлен путь активности в `AndroidManifest.xml`.
+  - Добавлен эмулятор сервера `Storage` и сетевой клиент `RetrofitNetworkClient`.
+  - Добавлены DTO и ответы поиска: `BaseResponse`, `TrackDto`, `TracksSearchRequest`, `TracksSearchResponse`.
+  - Добавлены `NetworkClient`, `TracksRepository` и реализация `TracksRepositoryImpl` с маппингом времени трека.
+  - Уточнены сценарии настроек: надежное открытие почты и браузера через chooser.
