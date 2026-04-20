@@ -1,7 +1,8 @@
-package com.example.playlistmaker.ui.screen
+package ru.yandex.practicum.playlistmarket.ui.screen
 
 import android.content.Intent
 import android.net.Uri
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.playlistmaker.R
+import ru.yandex.practicum.playlistmarket.R
 
 @Composable
 fun SettingsScreen() {
@@ -56,13 +57,23 @@ fun SettingsScreen() {
             modifier = Modifier.fillMaxWidth(),
             onClick = {
                 val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-                    data = Uri.parse("mailto:")
+                    data = Uri.parse("mailto:${Uri.encode(devEmail)}")
                     putExtra(Intent.EXTRA_EMAIL, arrayOf(devEmail))
                     putExtra(Intent.EXTRA_SUBJECT, emailSubject)
                     putExtra(Intent.EXTRA_TEXT, emailBody)
                 }
+                val chooser = Intent.createChooser(
+                    emailIntent,
+                    context.getString(R.string.choose_email_app)
+                )
                 if (emailIntent.resolveActivity(context.packageManager) != null) {
-                    context.startActivity(emailIntent)
+                    context.startActivity(chooser)
+                } else {
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.email_app_not_found),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         ) {
@@ -73,8 +84,18 @@ fun SettingsScreen() {
             modifier = Modifier.fillMaxWidth(),
             onClick = {
                 val agreementIntent = Intent(Intent.ACTION_VIEW, Uri.parse(agreementUrl))
+                val chooser = Intent.createChooser(
+                    agreementIntent,
+                    context.getString(R.string.choose_browser_app)
+                )
                 if (agreementIntent.resolveActivity(context.packageManager) != null) {
-                    context.startActivity(agreementIntent)
+                    context.startActivity(chooser)
+                } else {
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.browser_app_not_found),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         ) {

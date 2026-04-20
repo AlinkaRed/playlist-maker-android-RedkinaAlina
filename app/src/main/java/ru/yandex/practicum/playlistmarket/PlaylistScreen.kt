@@ -1,4 +1,4 @@
-package com.example.playlistmaker
+package ru.yandex.practicum.playlistmarket
 
 enum class PlaylistScreen(val route: String) {
     MAIN("main"),

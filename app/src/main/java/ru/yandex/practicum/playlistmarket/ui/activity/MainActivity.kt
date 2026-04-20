@@ -1,4 +1,4 @@
-package com.example.playlistmaker
+package ru.yandex.practicum.playlistmarket.ui.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,13 +8,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.example.playlistmaker.ui.theme.PlaylistMakerTheme
+import ru.yandex.practicum.playlistmarket.PlaylistHost
+import ru.yandex.practicum.playlistmarket.ui.theme.PlaylistMarketTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            PlaylistMakerTheme {
+            PlaylistMarketTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
