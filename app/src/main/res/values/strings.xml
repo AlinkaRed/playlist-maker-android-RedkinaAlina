@@ -5,7 +5,12 @@
     <string name="settings_title">Настройки</string>
     <string name="library_title">Медиатека</string>
     <string name="search_hint">Поиск</string>
+    <string name="search_icon_content_description">Иконка поиска</string>
     <string name="clear_search_query">Очистить поисковый запрос</string>
+    <string name="search_initial_text">Введите строку для поиска</string>
+    <string name="search_nothing_found">Ничего не найдено</string>
+    <string name="search_error_text">Ошибка: %1$s</string>
+    <string name="track_cover_content_description">Трек %1$s</string>
     <string name="library_stub_message">Нажата кнопка \"Медиатека\"</string>
     <string name="share_app_button">Поделиться приложением</string>
     <string name="contact_developers_button">Написать разработчикам</string>
