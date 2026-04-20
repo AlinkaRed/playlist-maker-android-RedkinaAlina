@@ -1,4 +1,4 @@
-package com.example.playlistmaker
+package ru.yandex.practicum.playlistmarket
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
@@ -6,9 +6,9 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.playlistmaker.ui.screen.MainScreen
-import com.example.playlistmaker.ui.screen.SearchScreen
-import com.example.playlistmaker.ui.screen.SettingsScreen
+import ru.yandex.practicum.playlistmarket.ui.screen.MainScreen
+import ru.yandex.practicum.playlistmarket.ui.screen.SearchScreen
+import ru.yandex.practicum.playlistmarket.ui.screen.SettingsScreen
 
 @Composable
 fun PlaylistHost(navController: NavHostController) {

@@ -1,4 +1,4 @@
-package com.example.playlistmaker.ui.screen
+package ru.yandex.practicum.playlistmarket.ui.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -24,7 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
-import com.example.playlistmaker.R
+import ru.yandex.practicum.playlistmarket.R
 
 @Composable
 fun SearchScreen() {
